@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "nodemon --exec babel-node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+      "dev": "nodemon --exec babel-node example.js",
+"test": "echo \"Error: no test specified\" && exit 1",
     "babel-node": "babel-node --presets=/*a*/ --ignore='foo|bar|baz'"
   },
   "dependencies": {

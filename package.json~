@@ -5,8 +5,7 @@
   "scripts": {
     "start": "nodemon --exec babel-node examples.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-     "dev": "nodemon --exec babel-node examples.js",
-   "babel-node": "babel-node --presets=/*a*/ --ignore='foo|bar|baz'"
+    "babel-node": "babel-node --presets=/*a*/ --ignore='foo|bar|baz'"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",

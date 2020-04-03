@@ -1,22 +1,20 @@
-const  swap= (arr, first_Index, second_Index) => {
-    var temp = arr[first_Index];
-    arr[first_Index] = arr[second_Index];
-    arr[second_Index] = temp;
+let mStr= "welcome To the realm";
+
+function lowStr(str) {
+	return str.toLowerCase();
 }
 
-const bubble_Sort = (arr) => {
+function capitalStr(str) {
+	str = str.split(" ");
+	
+	let strLen = str.length;
 
-    var len = arr.length,
-        i, j, stop;
+	for (let i = 0; i < strLen; i++) {
+		str[i] = str[i][0].toUpperCase() + str[i].substr(1);
+	}
 
-    for (i=0; i < len; i++){
-        for (j=0, stop=len-i; j < stop; j++){
-            if (arr[j] > arr[j+1]){
-                swap(arr, j, j+1);
-            }
-        }
-    }
-
-    return arr;
+	return str.join(" ");
 }
-console.log(bubble_Sort([-20, 0, 11, 5, -1, 4, 3]));
+
+console.log(lowStr(mStr));
+console.log(capitalStr(mStr));

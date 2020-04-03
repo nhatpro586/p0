@@ -18,3 +18,4 @@ function capitalStr(str) {
 
 console.log(lowStr(mStr));
 console.log(capitalStr(mStr));
+

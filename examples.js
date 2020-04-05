@@ -1,8 +1,8 @@
-let mStr= "Coronavirus disease (COVID-19) is an infectious disease caused by a new virus. The disease causes respiratory illness (like the flu) with symptoms such as a cough, fever, and in more severe cases, difficulty breathing. You can protect yourself by washing your hands frequently, avoiding touching your face, and avoiding close contact (1 meter or 3 feet) with people who are unwell.";
+let mStr= "Coronavirus disease (COVID-19) is an infectious disease caused by a new virus. The disease causes respiratory illness (like the flu) with symptoms such as a cough, fever, and in more severe cases, difficulty breathing. You can protect yourself by washing your hands frequently, avoiding touching your face, and avoiding close contact (1 meter or 3 feet) with people who are unwell. Be careful!!";
 
 function insertStr(bStr,str,pos) {
 	let rs="";
-	rs = bStr.slice(0,pos) + str + bStr.slice(pos);
+	rs = bStr.slice(0,pos-1) + str + bStr.slice(pos);
 	return rs;
 }
 
@@ -24,14 +24,16 @@ function countSpc(str) {
 	let line=1;
 	for (let i=0;i<str.length;i++) {
 		if (str[i]==" ") count+=1;
-		if (str[i]==" \n") {
+		if (str[i]=="\n") {
 			console.log("Dong",line,"co", count, "khoang trong");
 			line+=1;
 			count =0;
 		}
 	}
-	return "Done!!";
+	console.log("Dong",line,"co", count, "khoang trong");
+	return str;
 }
 
-console.log(splitStr(mStr));
-console.log(countSpc(mStr));
+mStr=splitStr(mStr);
+console.log(mStr);
+mStr=countSpc(mStr);
